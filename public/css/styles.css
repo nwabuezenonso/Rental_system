@@ -26,7 +26,7 @@ html{
 
 /* all similar content styling codes */
 section{
-  padding: 100px 0;
+  padding: 50px 0;
 }
 .max-width{
   max-width: 1300px;
@@ -69,7 +69,7 @@ section .title::after{
   bottom: -8px;
   left: 50%;
   font-size: 20px;
-  color: #5050D9;
+  color: #0A2558;
   padding: 0 5px;
   background: #fff;
   transform: translateX(-50%);
@@ -86,7 +86,7 @@ section .title::after{
 }
 .navbar.sticky{
   padding: 15px 0;
-  background: #5050D9;
+  background: #0A2558;
 }
 .navbar .max-width{
   display: flex;
@@ -99,7 +99,7 @@ section .title::after{
   font-weight: 600;
 }
 .navbar .logo a span{
-  color: #5050D9;
+  color: #0A2558;
   transition: all 0.3s ease;
 }
 .navbar.sticky .logo a span{
@@ -118,7 +118,7 @@ section .title::after{
   transition: color 0.3s ease;
 }
 .navbar .menu li a:hover{
-  color: #5050D9;
+  color: #0A2558;
 }
 .navbar.sticky .menu li a:hover{
   color: #fff;
@@ -135,7 +135,7 @@ section .title::after{
   position: fixed;
   height: 45px;
   width: 42px;
-  background: #5050D9;
+  background: #0A2558;
   right: 30px;
   bottom: 10px;
   text-align: center;
@@ -180,35 +180,37 @@ margin-right: 0;
 }
 .home .home-content .text-1{
   font-size: 27px;
+  color: #0A2558;
+  font-weight: bold;
 }
 .home .home-content .text-2{
   font-size: 75px;
-  font-weight: 600;
+  font-weight: bold;
   margin-left: -3px;
-  color: #fff;
+  color: #0A2558;
 }
 .home .home-content .text-3{
   font-size: 40px;
-  margin: 5px 0;
+  margin: 5px 0;;
 }
 .home .home-content .text-3 span{
-  color: #5050D9;
+  color: #0A2558;
   font-weight: 500;
 }
 .home .home-content a{
   display: inline-block;
-  background: #5050D9;
+  background: #0A2558;
   color: #fff;
   font-size: 25px;
   padding: 12px 36px;
   margin-top: 20px;
   font-weight: 400;
   border-radius: 6px;
-  border: 2px solid #5050D9;
+  border: 2px solid #0A2558;
   transition: all 0.3s ease;
 }
 .home .home-content a:hover{
-  color: #5050D9;
+  color: #0A2558;
   background: none;
 }
 
@@ -216,7 +218,7 @@ margin-right: 0;
 
 /*INPUT*/
 .search_form{
-  background-color: 	#5050D9;
+  background-color: 	#0A2558;
   padding: 12px;
 }
 .search_form input
@@ -246,7 +248,7 @@ margin-right: 0;
 }
 
 .btnn{
-  background-color: #5050D9;
+  background-color: #0A2558;
   color: white;
   border: none;
   width: 50%;
@@ -260,21 +262,25 @@ margin-right: 0;
 
 /* services section styling */
 .services, .teams{
-  color:#fff;
-  background: #111;
+  color:#000;
+  background: #0A2558;
 }
+.services .title{
+  color: white;
+}
+
 .services .title::before,
 .teams .title::before{
   background: #fff;
 }
-.services .title::after,
+/* .services .title::after,
 .teams .title::after{
-  background: #111;
+  background: #fff;
   content: "what we provide";
-}
+} */
 .services .serv-content .card{
   width: calc(33% - 20px);
-  background: #222;
+  background: #fff;
   text-align: center;
   border-radius: 6px;
   padding: 50px 25px;
@@ -282,7 +288,7 @@ margin-right: 0;
   transition: all 0.3s ease;
 }
 .services .serv-content .card:hover{
-  background: #57b154;
+  background: #fff;
 }
 .services .serv-content .card .box{
   transition: all 0.3s ease;
@@ -292,11 +298,11 @@ margin-right: 0;
 }
 .services .serv-content .card i{
   font-size: 50px;
-  color: #57b154;
+  color: #0A2558;
   transition: color 0.3s ease;
 }
 .services .serv-content .card:hover i{
-  color: #fff;
+  color: #222;
 }
 .services .serv-content .card .text{
   font-size: 25px;
@@ -309,7 +315,7 @@ margin-right: 0;
 
 /*FREQUENTLY ASKED QUESTION*/
 ::selection{
-  background: #5050D9
+  background: #0A2558
 }
 .wrapper{
   max-width: 600px;
@@ -319,7 +325,7 @@ margin-right: 0;
 .wrapper .child-tab{
   margin-bottom: 8px;
   border-radius: 3px;
-  box-shadow: 0px 0px 15px rgba(0,0,0,0.18);
+  /* box-shadow: 0px 0px 15px rgba(0,0,0,0.18); */
 }
 .wrapper .parent-tab label,
 .wrapper .child-tab label{
@@ -335,18 +341,24 @@ margin-right: 0;
   transition: all 0.3s ease;
 }
 .wrapper .parent-tab label:hover{
-  background: #5050D9;
+  background: #0A2558;
 }
+
+.wrapper .parent-tab span:hover{
+  color: #fff;
+}
+
+
 .parent-tab input:checked ~ label,
 .child-tab input:checked ~ label{
   border-radius: 3px 3px 0 0;
   background: #fff;
 }
 .wrapper label span{
-  color: #5050D9;
+  color: #0A2558;
   font-size: 18px;
   font-weight: 500;
-  text-shadow: 0 -1px 1px #5050D9;
+  text-shadow: 0 -1px 1px #0A2558;
 }
 .wrapper .child-tab label span{
   font-size: 17px;
@@ -356,11 +368,11 @@ margin-right: 0;
   height: 30px;
   width: 30px;
   font-size: 15px;
-  color: #5050D9;
+  color: #0A2558;
   display: block;
   background: #fff;
   border-radius: 50%;
-  text-shadow: 0 -1px 1px #5050D9;
+  text-shadow: 0 -1px 1px #0A2558;
 }
 .wrapper .child-tab label .icon{
   height: 27px;
@@ -406,7 +418,7 @@ input[type="checkbox"]{
 
 /* footer section styling */
 footer{
-  background: black;
+  background: #0A2558;
   padding: 15px 23px;
   color: #fff;
   text-align: center;

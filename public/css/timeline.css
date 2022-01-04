@@ -13,7 +13,7 @@ html{
 } */
 ::selection{
   color: #fff;
-  background: #5050d9;
+  background: #0A2558;
 }
 .wrapper{
   max-width: 1080px;
@@ -25,7 +25,7 @@ html{
   position: absolute;
   height: 95%;
   width: 4px;
-  background: #5050d9;
+  background: #0A2558;
   left: 50%;
   top: 60px;
   transform: translateX(-50%);
@@ -71,7 +71,7 @@ html{
   text-align: center;
   line-height: 40px;
   border-radius: 50%;
-  color: #5050d9;
+  color: #0A2558;
   font-size: 17px;
   box-shadow: 0 0 0 4px #fff, inset 0 2px 0 rgba(0,0,0,0.08), 0 3px 0 4px rgba(0,0,0,0.05);
 }
@@ -104,7 +104,7 @@ html{
 }
 .row section .bottom a{
   text-decoration: none;
-  background: #5050d9;
+  background: #0A2558;
   color: #fff;
   padding: 7px 15px;
   border-radius: 5px;
