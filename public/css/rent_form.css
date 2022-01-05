@@ -1,15 +1,15 @@
 .container{
     /* max-width: 800px; */
     background: #fff;
-    width: 900px; 
-    padding: 25px 40px 10px 40px;
+    width: 360px; 
+    padding: 25px 40px 10px 25px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
   }
   .container .text{
     text-align: center;
     font-size: 35px;
     font-weight: 600;
-    background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
+    background: #0A2558;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -17,13 +17,13 @@
     padding: 30px 0 0 0;
   }
   .container form .form-row{
-    display: flex;
-    margin: 32px 0;
+    /* display: flex; */
+    margin: 35px 0;
   }
   form .form-row .input-data{
     width: 100%;
     height: 40px;
-    margin: 0 20px;
+    margin: 10px 20px;
     position: relative;
   }
   form .form-row .textarea{
@@ -35,6 +35,7 @@
     width: 100%;
     height: 100%;
     border: none;
+    outline: none;
     font-size: 17px;
     border-bottom: 2px solid rgba(0,0,0, 0.12);
   }
@@ -42,7 +43,7 @@
   .input-data input:valid ~ label, .textarea textarea:valid ~ label{
     transform: translateY(-20px);
     font-size: 14px;
-    color: #3498db;
+    color: #0A2558;
   }
   .textarea textarea{
     resize: none;
@@ -82,7 +83,7 @@
   .textarea textarea:valid ~ .underline:before{
     transform: scale(1);
   }
-  .submit-btn .input-data{
+  /* .submit-btn .input-data{
     overflow: hidden;
     height: 45px!important;
     width: 25%!important;
@@ -109,7 +110,7 @@
     cursor: pointer;
     position: relative;
     z-index: 2;
-  }
+  } */
   @media (max-width: 700px) {
     .container .text{
       font-size: 30px;

@@ -1,1 +1,90 @@
-/*  */
+.show-btn{
+  /* position: fixed;
+  top: 50%;
+  left: 50%; */
+  /* user-select: none;
+  transform: translate(-50%, -50%); */
+}
+.show-btn.disabled{
+  pointer-events: none;
+}
+.modal{
+  position: fixed;
+  right: 0;
+  opacity: 0;
+  bottom: -100%;
+  width: 400px;
+  transition: bottom 0.4s, opacity 0.4s;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+}
+.modal.show{
+  bottom: 0;
+  opacity: 1;
+}
+.modal .top-content{
+  background: #0A2558;
+  width: 100%;
+  padding: 0 0 30px 0;
+}
+.top-content .left-text{
+  text-align: center;
+  padding: 10px 15px;
+  font-size: 18px;
+  color: #f2f2f2;
+  font-weight: 500;
+  user-select: none;
+}
+.top-content .close-icon{
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 23px;
+  color: silver;
+  cursor: pointer;
+}
+.close-icon:hover{
+  color: #b6b6b6;
+}
+.top-content .fa-camera-retro{
+  font-size: 80px;
+  color: #f2f2f2;
+}
+.modal .bottom-content{
+  background: white;
+  width: 100%;
+  padding: 15px 20px;
+}
+.bottom-content .text{
+  font-size: 28px;
+  font-weight: 600;
+  color: #34495e;
+}
+.bottom-content p{
+  font-size: 18px;
+  line-height: 27px;
+  color: grey;
+}
+.bottom-content .close-btn{
+  padding: 2px 0;
+}
+.show-btn button,
+.close-btn button{
+  padding: 9px 13px;
+  background: #0A2558;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  color: #f2f2f2;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.show-btn button{
+  padding: 12px 15px;
+}
+.show-btn button:hover,
+.close-btn button:hover{
+  background: #0A2558;
+}
