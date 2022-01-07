@@ -1,59 +1,66 @@
 const express = require('express');
 const mongoose = require('mongoose')
-// const Authrouters = require('./routes/authRoutes');
-// const cookieParser = require('cookie-parser');
-// const { requireAuth, checkUser } = require('./middleware/authmiddleware'); 
-// const { sendWelcomeEmail } = require('./emails/mail')
-// const sendMail = require('./mail')
+const User = require('./model/User')
 
 //set up the express function
 const app = express()
 
 // middleware
 app.use(express.static('public'));
-// app.use(express.json());
-// app.use(cookieParser());
+app.use(express.json());
+
 
 // view engine
 app.set('view engine', 'ejs');
 
 // database connection
-// const dbURI = 'mongodb://localhost/user'
-// mongoose.connect(dbURI, {useNewUrlParser: true , useUnifiedTopology: true})
-//   .then((result) => app.listen(3000, () => {'Server is running on port 3000'}))
-//   .catch((err) => console.log(err));
+const dbURI = 'mongodb://localhost/Rent'
+mongoose.connect(dbURI, {useNewUrlParser: true , useUnifiedTopology: true})
+  .then((result) => app.listen(3000, () => {'Server is running on port 3000'}))
+  .catch((err) => console.log(err));
 
 //routes
-// app.get('*', checkUser)
 app.get('/', (req, res)=>{
-  res.sendFile('./public/html/index.html' , {root: __dirname}) 
+  res.render('index' ) 
 })
 
-app.get('/details',  (req, res) =>{
-  res.sendFile('./public/html/details.html' , {root: __dirname}) 
+app.get('/dashboard', (req, res)=>{
+  res.render('dashboard' ) 
 })
 
-// app.get('/details',requireAuth,  (req, res) =>{
-//   res.sendFile('./public/html/details.html' , {root: __dirname}) 
-// })\
-// app.post("/email", (req, res) =>{
-//   const {email, subject} = req.body
-//   console.log('Data: ', req.body)
-  
-//   sendMail(email, subject , function(err,data){
-//       if(err){
-//           res.status(500).json({message: 'Internal Error'});
-//       }else{
-//           res.json({message: 'Email sent!!!!'})
-//       }
-//   })
-//   res.json({message: 'Message recieved!'})
-// })
-// app.use(Authrouters);
+app.get('/details', (req, res)=>{
+  res.render('details' ) 
+})
 
-//Error routes
-// app.use((req, res)=>{
-//   res.status(404).render('404')
-// })
+app.get('/message', (req, res)=>{
+  res.render('messages' ) 
+})
 
-app.listen(3000, () => {'Server is running on port 3000'})
+app.get('/product', (req, res)=>{
+  res.render('index' ) 
+})
+
+
+//Auth routes
+app.post('/signup',  async(req, res) => {
+
+  const {email, password} = req.body
+
+  // console.log(email_content, password_content)
+  try {
+    const user = await User.create({ email, password });
+    //const token = createToken(user._id);
+    //res.cookie('jwt', token, { httpOnly: true, maxAge: maxAge * 1000 });
+    res.status(201).json({ user});
+  }
+  catch(err) {
+    console.log(err)
+  }
+})
+
+app.post('/login', (req, res) => {
+  const {email, password} = req.body
+
+  console.log(email, password)
+  res.send(' new Login')
+})

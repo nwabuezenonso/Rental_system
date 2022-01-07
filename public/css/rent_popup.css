@@ -1,10 +1,10 @@
-.show-btn{
-  /* position: fixed;
+/* .show-btn{
+  position: fixed;
   top: 50%;
-  left: 50%; */
-  /* user-select: none;
-  transform: translate(-50%, -50%); */
-}
+  left: 50%; 
+  user-select: none;
+  transform: translate(-50%, -50%);
+} */
 .show-btn.disabled{
   pointer-events: none;
 }

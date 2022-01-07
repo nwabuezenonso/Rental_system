@@ -35,40 +35,73 @@ $(document).ready(function(){
 });
 
 
-let count = 0;
-//if add to cart btn clicked
-$('.cart-btn').on('click', function (){
-  let cart = $('.cart-nav');
-  // find the img of that card which button is clicked by user
-  let imgtodrag = $(this).parent('.buttons').parent('.content').parent('.card').find("img").eq(0);
-  if (imgtodrag) {
-    // duplicate the img
-    var imgclone = imgtodrag.clone().offset({
-      top: imgtodrag.offset().top,
-      left: imgtodrag.offset().left
-    }).css({
-      'opacity': '0.8',
-      'position': 'absolute',
-      'height': '150px',
-      'width': '150px',
-      'z-index': '100'
-    }).appendTo($('body')).animate({
-      'top': cart.offset().top + 20,
-      'left': cart.offset().left + 30,
-      'width': 75,
-      'height': 75
-    }, 1000, 'easeInOutExpo');
+// SIGNUP POPUP
+const viewBtn = document.querySelector(".view-modal"),
+popup = document.querySelector(".popup"),
+close = popup.querySelector(".close");
+viewBtn.onclick = ()=>{
+  popup.classList.toggle("show");
+  popup.querySelector('.text').textContent = "Rent a Vehicle"
+}
+close.onclick = ()=>{
+  viewBtn.click();
+}
 
-    setTimeout(function(){
-      count++;
-      $(".cart-nav .item-count").text(count);
-    }, 1500);
 
-    imgclone.animate({
-      'width': 0,
-      'height': 0
-    }, function(){
-      $(this).detach()
-    });
-  }
-});
+const Lease = document.querySelector(".view-modal_lease"),
+popupLease = document.querySelector(".popup"),
+closeLease = popup.querySelector(".close");
+Lease.onclick = ()=>{
+  popupLease.classList.toggle("show");
+  popupLease.querySelector('.text').textContent = "Lease a Vehicle"
+}
+closeLease.onclick = ()=>{
+  Lease.click();
+}
+
+
+//SIGNUP BACKEND LINKING
+const RentForm = document.querySelector('.signupBtn');
+    const emailRent = document.querySelector('.email')
+    const passwordRent = document.querySelector('.password')
+    const CpasswordRent = document.querySelector('.Cpassword')
+
+    RentForm.addEventListener('click', async (e)=>{
+        e.preventDefault();
+
+        //reset errors
+        // email.textContent =  ' ';
+        // password.textContent = ' '
+        // Cpassword.textContent = ' '
+
+        const email = emailRent.value;
+        const password = passwordRent.value;
+        const Cpassword = CpasswordRent.value
+
+        //get the values
+        if(password == Cpassword){
+         console.log(email, password)
+          
+         try{
+            const res = await fetch('/signup',{
+              method: 'POST',
+              body: JSON.stringify({email, password}),
+              headers: {'Content-Type': 'application/json'}
+            });
+            const data = await res.json()
+
+            // if(data.errors){
+            //   emailError.textContent = data.errors.email;
+            //   passwordError.textContent = data.errors.password
+            // }
+            if(data.user){
+              // location.assign('/')
+              console.log("Signup is working", data)
+            }
+          }catch (err){
+          console.log(err)
+          }
+        }else{
+          console.log("Signup not working")
+        }
+    })

@@ -7,7 +7,7 @@
     <!-- <script src="https://code.jquery.com/jquery-3.5.0.js"></script> -->
     <link rel="stylesheet" href="../css/rent_form.css">
     <link rel="stylesheet" href="../css/rent_popup.css">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="../css/signup_popup.css">
     <link rel="stylesheet" href="../css/timeline.css">
     <link rel="stylesheet" href="../css/coming_soon.css">
@@ -27,8 +27,8 @@
           <div class="logo"><a href="#">Pick<span>Up.</span></a></div>
           <ul class="menu">
               <li><a href="#home" class="menu-btn">Discover vehicles</a></li>
-              <li><a href="#about" class="menu-btn  view-modal">Rent a vehicle</a></li>
-              <li><a href="#services" class="menu-btn">Lease a Vehicle</a></li>
+              <li><a href="#" class="menu-btn  view-modal">Rent a vehicle</a></li>
+              <li><a href="#" class="menu-btn   view-modal_lease">Lease a Vehicle</a></li>
           </ul>
           <div class="menu-btn">
               <i class="fa fa-bars"></i>
@@ -126,11 +126,6 @@
         </section>
       </div>
     </div>
-
-     <!-- search form -->
-     <!-- <div class="search_form">
-        <input type="text" placeholder="Search">
-    </div> -->
 
     <!-- vehicles -->
     <div class="discover_text">
@@ -415,24 +410,10 @@
 
   <div class="popup">
     <header>
-      <span>Rent a Vehicle</span>
+      <span class="text"></span>
       <div class="close"><i class="fa fa-times"></i></div>
     </header>
     <div class="content">
-      <!-- <p>Share this link via</p>
-      <ul class="icons">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-whatsapp"></i></a>
-        <a href="#"><i class="fab fa-telegram-plane"></i></a>
-      </ul>
-      <p>Or copy link</p>
-      <div class="field">
-        <i class="url-icon uil uil-link"></i>
-        <input type="text" readonly value="example.com/share-link">
-        <button>Copy</button>
-      </div> -->
       <div class="wrapperrrr">
         <div class="title-text">
            <div class="title login">
@@ -451,7 +432,7 @@
               <div class="slider-tab"></div>
            </div>
            <div class="form-inner">
-              <form action="#" class="login">
+              <form action="" class="login">
                  <div class="field">
                     <input type="text" placeholder="Email Address" required>
                  </div>
@@ -469,19 +450,19 @@
                     Not a member? <a href="">Signup now</a>
                  </div>
               </form>
-              <form action="#" class="signup">
+              <form action=" " class="signup">
                  <div class="field">
-                    <input type="text" placeholder="Email Address" required>
+                    <input type="text" class="email" placeholder="Email Address" required>
                  </div>
                  <div class="field">
-                    <input type="password" placeholder="Password" required>
+                    <input type="password" class="password" placeholder="Password" required>
                  </div>
                  <div class="field">
-                    <input type="password" placeholder="Confirm password" required>
+                    <input type="password" class="Cpassword" placeholder="Confirm password" required>
                  </div>
                  <div class="field btn">
                     <div class="btn-layer"></div>
-                    <input type="submit" value="Signup">
+                    <input type="submit" class="signupBtn" value="Signup">
                  </div>
               </form>
            </div>
@@ -489,32 +470,7 @@
      </div>
     </div>
   </div>
-  <script>
-    const viewBtn = document.querySelector(".view-modal"),
-    popup = document.querySelector(".popup"),
-    close = popup.querySelector(".close");
-    // field = popup.querySelector(".field"),
-    // input = field.querySelector("input"),
-    // copy = field.querySelector("button");
-    viewBtn.onclick = ()=>{
-      popup.classList.toggle("show");
-    }
-    close.onclick = ()=>{
-      viewBtn.click();
-    }
-    // copy.onclick = ()=>{
-    //   input.select(); //select input value
-    //   if(document.execCommand("copy")){ //if the selected text copy
-    //     field.classList.add("active");
-    //     copy.innerText = "Copied";
-    //     setTimeout(()=>{
-    //       window.getSelection().removeAllRanges(); //remove selection from document
-    //       field.classList.remove("active");
-    //       copy.innerText = "Copy";
-    //     }, 3000);
-    //   }
-    // }
-  </script>
+
 
 
 
