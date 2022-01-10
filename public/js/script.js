@@ -89,13 +89,13 @@ const RentForm = document.querySelector('.signupBtn');
               headers: {'Content-Type': 'application/json'}
             });
             const data = await res.json()
-
+            console.log(data)
             // if(data.errors){
             //   emailError.textContent = data.errors.email;
             //   passwordError.textContent = data.errors.password
             // }
             if(data.user){
-              // location.assign('/')
+              location.assign('/dashboard')
               console.log("Signup is working", data)
             }
           }catch (err){
@@ -105,3 +105,47 @@ const RentForm = document.querySelector('.signupBtn');
           console.log("Signup not working")
         }
     })
+
+
+    //Login Form
+const RentLogin = document.querySelector('.loginBtn');
+const emailLogin = document.querySelector('.emailLogin')
+const passwordLogin = document.querySelector('.passwordLogin')
+
+RentLogin.addEventListener('click', async (e)=>{
+    e.preventDefault();
+
+    //reset errors
+    // email.textContent =  ' ';
+    // password.textContent = ' '
+    // Cpassword.textContent = ' '
+
+    const email = emailLogin.value;
+    const password = passwordLogin.value;
+    // const Cpassword = CpasswordRent.value
+
+    //get the values
+    // if(password == Cpassword){
+     console.log(email, password)
+      
+     try{
+        const res = await fetch('/login', {
+          method: 'POST',
+          body: JSON.stringify({email, password}),
+          headers: {'Content-Type': 'application/json'}
+        });
+        const data = await res.json()
+
+        // if(data.errors){
+        //   emailError.textContent = data.errors.email;
+        //   passwordError.textContent = data.errors.password
+        // }
+        if(data.user){
+          location.assign('/dashboard')
+          console.log("login is working", data)
+        }
+      }catch (err){
+      console.log(err)
+      }
+
+})

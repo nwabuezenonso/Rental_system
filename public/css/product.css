@@ -22,7 +22,7 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
-  margin-left: 80px;
+  margin-left: 110px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -35,7 +35,7 @@
   z-index: 12;
 }
 .wrapperrr .right .logo{
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;
   margin-top: 18px;
 }
@@ -47,6 +47,8 @@
 .right .about p{
   color: #8d8d8d;
   font-size: 17px;
+  text-align: justify;
+  padding: 20px;
 }
 .right button{
   background: #0A2558;
@@ -71,14 +73,36 @@ button:hover{
   transform: scale(0.98);
 }
 .left{
-  background: url('../images/vlad-kutepov-gvMsGzkx8eM-unsplash.jpg') no-repeat;
-  background-size: cover;
-  background-position: center;
   height: 100%;
   width: 50%;
   border-radius: 0 5px 5px 0;
   cursor: pointer;
 }
+
+.image1{
+  background: url('../images/cool/van/cheverolet_express.webp') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.image2{
+  background: url('../images/cool/cars/lexus\ Rx\ 350.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.image3{
+  background: url('../images/cool/cars/toyota_sienna_ce.jpg') no-repeat;
+  background-size: cover;
+  background-position: left;
+}
+
+.image4{
+  background: url('../images/cool/cars/Ford\ F-250.jpg') no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+
 .left ul{
   height: 100%;
   width: 100%;

@@ -62,8 +62,8 @@
     background: #fff;
   }
   .input-data .underline{
-    position: absolute;
-    bottom: 0;
+    /* position: absolute;
+    bottom: 0; */
     height: 2px;
     width: 100%;
   }
@@ -72,7 +72,7 @@
     content: "";
     height: 2px;
     width: 100%;
-    background: #3498db;
+    background: #0A2558;
     transform: scaleX(0);
     transform-origin: center;
     transition: transform 0.3s ease;

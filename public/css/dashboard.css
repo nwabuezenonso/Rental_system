@@ -48,10 +48,11 @@
   align-items: center;
   text-decoration: none;
   transition: all 0.4s ease;
+  color: #fff;
 }
-.sidebar .nav-links li a.active{
+/* .sidebar .nav-links li a.active{
   background: #081D45;
-}
+} */
 .sidebar .nav-links li a:hover{
   background: #081D45;
 }
@@ -71,7 +72,13 @@
   position: absolute;
   bottom: 0;
   width: 100%;
+  color: white;
 }
+.log__out{
+  color: white;
+  text-decoration: none;
+}
+
 .home-section{
   position: relative;
   background: #f5f5f5;
@@ -261,7 +268,7 @@ nav .profile-details i{
 
 /* left box */
 .home-content .sales-boxes .recent-sales{
-  width: 65%;
+  width: 100%;
   background: #fff;
   padding: 20px 30px;
   margin: 0 20px;

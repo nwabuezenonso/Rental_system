@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  font-family: 'Segoe UI';
 }
 html{
   scroll-behavior: smooth;
@@ -37,9 +38,9 @@ section{
   padding: 0 80px;
   margin: auto;
 }
-.about, .services, .skills, .teams, .contact, footer{
+/* .about, .services, .skills, .teams, .contact, footer{
   font-family: 'Poppins', sans-serif;
-}
+} */
 .about .about-content,
 .services .serv-content,
 .skills .skills-content,
@@ -90,7 +91,10 @@ section .title::after{
 }
 .navbar.sticky{
   padding: 15px 0;
-  background: #0A2558;
+  background: #fff;
+}
+.navbar.sticky .menu li a{
+  color: #0A2558;
 }
 .navbar .max-width{
   display: flex;
@@ -98,16 +102,16 @@ section .title::after{
   justify-content: space-between;
 }
 .navbar .logo a{
-  color: #fff;
-  font-size: 35px;
-  font-weight: 600;
+  color: #0A2558;
+  font-size: 40px;
+  font-weight: 800;
 }
 .navbar .logo a span{
   color: #0A2558;
   transition: all 0.3s ease;
 }
 .navbar.sticky .logo a span{
-  color: #fff;
+  color: #0A2558;
 }
 .navbar .menu li{
   list-style: none;
@@ -116,7 +120,7 @@ section .title::after{
 .navbar .menu li a{
   display: block;
   color: #fff;
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 500;
   margin-left: 25px;
   transition: color 0.3s ease;
@@ -167,7 +171,7 @@ section .title::after{
 /* home section styling */
 .home{
   display: flex;
-  background: url("../images/obi-onyeador-JIcR3-O8ko8-unsplash.jpg") no-repeat center;
+  background: url("../images/pexels-torsten-dettlaff-70912.jpg") no-repeat center;
   height: 100vh;
   color: #fff;
   min-height: 500px;
@@ -175,6 +179,7 @@ section .title::after{
   background-attachment: fixed;
   font-family: 'Ubuntu', sans-serif;
 }
+
 .home .max-width{
 width: 100%;
 display: flex;
@@ -184,14 +189,14 @@ margin-right: 0;
 }
 .home .home-content .text-1{
   font-size: 27px;
-  color: #0A2558;
-  font-weight: bold;
+  color: #fff;
+  font-weight: normal;
 }
 .home .home-content .text-2{
   font-size: 75px;
   font-weight: bold;
   margin-left: -3px;
-  color: #0A2558;
+  color: #fff;
 }
 .home .home-content .text-3{
   font-size: 40px;
@@ -214,11 +219,16 @@ margin-right: 0;
   transition: all 0.3s ease;
 }
 .home .home-content a:hover{
-  color: #0A2558;
+  color: #fff;
   background: none;
+  border: 2px solid #fff;
 }
 
-
+.heading__{
+  margin: 50px;
+  text-align: center;
+  font-size: 30px;
+}
 
 /*INPUT*/
 .search_form{
